@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart fashion recommender applicaton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body
+        {
+             display: flex;
+             justify-content: center;
+        }
+        .main
+        {
+            margin-top: 50px;
+            width: 700px;
+            height: 980px;
+            background-color: rgb(237, 248, 244);
+            filter: drop-shadow(2px 2px 5px );
+            padding: 10px;
+            border-radius: 10px;
+            
+
+        }
+        body
+        {
+            background-color: rgb(250, 255, 253);
+            font-family: serif;
+            
+        }
+        
+#topic
+{
+    position: static;
+    margin: 30px;
+    margin-left: 150px;
+    width: 400px;
+    height: 40px;
+    background-image: linear-gradient(yellow, orange);
+    border-radius: 28px;
+    text-align: center;
+    line-height: 40px;
+
+
+}
+
+img
+{ 
+  width: 50px;
+  height: 50px;
+}
+.reaction
+{
+    width: 60px; 
+    height:60px;
+    
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+img
+{
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    filter: drop-shadow(3px 3px 4px);
+}
+#btn
+{
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-left: 130px;
+    border-color: darkorange;
+}
+
+    </style>
+</head>
+<body>
+    
+     <div class="main">    
+        
+        <div id="topic"><h2>Customer Feedback Form</h2></div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic1" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">1. The Website was easy to navigate.</div>
+            <div>
+            <img id="11" src="./empty_star.png" onclick="call(1,1)">
+            <img id="21" src="./empty_star.png" onclick="call(2,1)">
+            <img id="31" src="./empty_star.png" onclick="call(3,1)">
+            <img id="41" src="./empty_star.png" onclick="call(4,1)">
+            <img id="51" src="./empty_star.png" onclick="call(5,1)">
+            <input name="question1" style="display: none;" value="">
+            </div>
+            <img id="reaction1" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic2" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">2. It was easy to browse the items.</div>
+            <div>
+            <img id="12" src="./empty_star.png" onclick="call(1,2)">
+            <img id="22" src="./empty_star.png" onclick="call(2,2)">
+            <img id="32" src="./empty_star.png" onclick="call(3,2)">
+            <img id="42" src="./empty_star.png" onclick="call(4,2)">
+            <img id="52" src="./empty_star.png" onclick="call(5,2)">
+            </div>
+            <img id="reaction2" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic3" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">3. Item pictures were clear and accurate.</div>
+            <div>
+            <img id="13" src="./empty_star.png" onclick="call(1,3)">
+            <img id="23" src="./empty_star.png" onclick="call(2,3)">
+            <img id="33" src="./empty_star.png" onclick="call(3,3)">
+            <img id="43" src="./empty_star.png" onclick="call(4,3)">
+            <img id="53" src="./empty_star.png" onclick="call(5,3)">
+            </div>
+            <img id="reaction3" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic4" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">4.Item descriptions were clear and accurate.</div>
+            <div>
+            <img id="14" src="./empty_star.png" onclick="call(1,4)">
+            <img id="24" src="./empty_star.png" onclick="call(2,4)">
+            <img id="34" src="./empty_star.png" onclick="call(3,4)">
+            <img id="44" src="./empty_star.png" onclick="call(4,4)">
+            <img id="54" src="./empty_star.png" onclick="call(5,4)">
+            </div>
+            <img id="reaction4" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic5" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">5. It was able to find item I was shoppin for.</div>
+            <div>
+            <img id="15" src="./empty_star.png" onclick="call(1,5)">
+            <img id="25" src="./empty_star.png" onclick="call(2,5)">
+            <img id="35" src="./empty_star.png" onclick="call(3,5)">
+            <img id="45" src="./empty_star.png" onclick="call(4,5)">
+            <img id="55" src="./empty_star.png" onclick="call(5,5)">
+            </div>
+            <img id="reaction5" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic6" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">6. Are you satisfied by this purchase.</div>
+            <div>
+            <img id="16" src="./empty_star.png" onclick="call(1,6)">
+            <img id="26" src="./empty_star.png" onclick="call(2,6)">
+            <img id="36" src="./empty_star.png" onclick="call(3,6)">
+            <img id="46" src="./empty_star.png" onclick="call(4,6)">
+            <img id="56" src="./empty_star.png" onclick="call(5,6)">
+            </div>
+            <img id="reaction6" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic7" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">7. The shopping cart was easy to use.</div>
+            <div>
+            <img id="17" src="./empty_star.png" onclick="call(1,7)">
+            <img id="27" src="./empty_star.png" onclick="call(2,7)">
+            <img id="37" src="./empty_star.png" onclick="call(3,7)">
+            <img id="47" src="./empty_star.png" onclick="call(4,7)">
+            <img id="57" src="./empty_star.png" onclick="call(5,7)">
+            </div>
+            <img id="reaction7" class="reaction" src="./1.svg"> 
+         </div>
+
+         <div style="width: 700px;height:60px;display: flex;justify-content: space-between;padding: 20px 2px;">
+            <div id="tic8" style="width: 5px;height:80px;background-color: aqua;border-radius: 6px;"></div> &nbsp;
+            <div style="font-size: 20px;line-height: 50px;">8. There were sufficient shipping options.</div>
+            <div>
+            <img id="18" src="./empty_star.png" onclick="call(1,8)">
+            <img id="28" src="./empty_star.png" onclick="call(2,8)">
+            <img id="38" src="./empty_star.png" onclick="call(3,8)">
+            <img id="48" src="./empty_star.png" onclick="call(4,8)">
+            <img id="58" src="./empty_star.png" onclick="call(5,8)">
+            </div>
+            <img id="reaction8" class="reaction" src="./1.svg"> 
+         </div>
+
+
+         <button onclick="clicked()" id="btn">SUBMIT</button>
+
+     </div>
+
+              
+     <script>
+        function call(b,a)
+        {          
+            var t=document.getElementById(""+b+""+a);
+            t.src='./filled_star.png';
+            console.log(this.id);
+            var p=document.getElementById("tic"+a);
+            var s=document.getElementById("reaction"+(a));
+            s.src= ("./"+(b+1)+".svg");
+            s.style.transform="scale(1.1)"
+            p.style.backgroundImage='linear-gradient(orange, yellow)';
+            
+        }
+        function clicked()
+        {
+            alert("Thanking you for your responses !!");
+        
+        }
+     </script>
+</body>
+</html>
